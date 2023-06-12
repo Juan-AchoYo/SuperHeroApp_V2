@@ -1,10 +1,12 @@
 package com.juan.superheroapp_v2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.juan.superheroapp_v2.DetailActivity.Companion.SUPER_HERO_ID
 import com.juan.superheroapp_v2.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -39,15 +41,21 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        adapter = SuperHeroAdapter()
+        adapter = SuperHeroAdapter { id -> navigateToDetail(id) }
         binding.rvMain.layoutManager = LinearLayoutManager(this)
         binding.rvMain.adapter = adapter
+    }
+
+    private fun navigateToDetail(id: String) {
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, id)
+        startActivity(intent)
     }
 
     private fun searchByName(query: String) {
         binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
-            val response: Response<SuperHeroData> =
+            val response: Response<SuperHeroDataResponse> =
                 retrofit.create(ApiService::class.java).getSuperHeroes(query)
             if (response.isSuccessful) {
                 runOnUiThread {

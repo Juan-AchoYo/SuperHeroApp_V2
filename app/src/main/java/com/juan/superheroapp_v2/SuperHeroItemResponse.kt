@@ -3,15 +3,15 @@ package com.juan.superheroapp_v2
 import com.google.gson.annotations.SerializedName
 
 
-data class SuperHeroData(
+data class SuperHeroDataResponse(
     @SerializedName("response") val response: String,
-    @SerializedName("results") val results: List<SuperHeroItem>
+    @SerializedName("results") val results: List<SuperHeroItemResponse>
 )
-data class SuperHeroItem(
+data class SuperHeroItemResponse(
     @SerializedName("id") val id:String,
     @SerializedName("name") val name:String,
-    @SerializedName("image") val image:SuperHeroImage
+    @SerializedName("image") val image:SuperHeroImageResponse
 )
-data class SuperHeroImage(
+data class SuperHeroImageResponse(
     @SerializedName("url") val url:String
 )
