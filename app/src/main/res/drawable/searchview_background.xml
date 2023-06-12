@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--No está funcionando-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#CEB7B7" /> <!-- Color de fondo del SearchView -->
+        <stroke android:color="#C8000000" android:width="2dp" /> <!-- Color y ancho del borde -->
+        <corners android:radius="8dp" /> <!-- Radio de las esquinas del SearchView -->
+    </shape>
+
+</selector>
