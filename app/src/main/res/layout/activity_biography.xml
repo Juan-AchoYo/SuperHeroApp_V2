@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".BiographyActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvAlterEgos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+    <!--Esto es una lista, de momento voy a intentar meter todos los valores juntos-->
+    <TextView
+        android:id="@+id/tvAliases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvPlaceOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvFirstAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvPublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+    <TextView
+        android:id="@+id/tvAlignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        tools:text="jajajaj" />
+
+</LinearLayout>

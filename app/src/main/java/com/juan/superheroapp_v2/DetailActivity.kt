@@ -1,5 +1,6 @@
 package com.juan.superheroapp_v2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.juan.superheroapp_v2.databinding.ActivityDetailBinding
@@ -26,6 +27,46 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         superHeroId = intent.getStringExtra(SUPER_HERO_ID).orEmpty()
         getSuperHeroInformation(superHeroId)
+        initUI()
+    }
+
+    private fun initUI() {
+        binding.btnBiography.setOnClickListener { navigateToBiography() }
+        binding.btnAppearance.setOnClickListener { navigateToAppearance() }
+        binding.btnConnections.setOnClickListener { navigateToConnections() }
+        binding.btnWork.setOnClickListener { navigateToWork() }
+        binding.btnPowerStats.setOnClickListener { navigateToPowerStats() }
+    }
+
+    private fun navigateToPowerStats() {
+        val intent = Intent(this, PowerStatsActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, superHeroId)
+        startActivity(intent)
+    }
+
+    private fun navigateToWork() {
+        val intent = Intent(this, WorkActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, superHeroId)
+        startActivity(intent)
+    }
+
+    private fun navigateToConnections() {
+        val intent = Intent(this, ConnectionsActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, superHeroId)
+        startActivity(intent)
+    }
+
+    private fun navigateToAppearance() {
+        val intent = Intent(this, AppearanceActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, superHeroId)
+        startActivity(intent)
+    }
+
+    private fun navigateToBiography() {
+        val intent = Intent(this, BiographyActivity::class.java)
+        intent.putExtra(SUPER_HERO_ID, superHeroId)
+        startActivity(intent)
+
     }
 
     private fun getSuperHeroInformation(superHeroId: String) {

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SuperHeroApp_V2</string>
+    <string name="biography">Biografía</string>
+    <string name="powerstats">Estadísticas de poder</string>
+    <string name="appearance">Apariencia</string>
+    <string name="work">Trabajo</string>
+    <string name="connections">Conexiones</string>
 </resources>

@@ -9,23 +9,114 @@
     <ImageView
         android:id="@+id/ivSuperHeroDetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/tvSuperHeroDetailTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
-
-
-    <TextView
-        android:id="@+id/tvSuperHeroDetailTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivSuperHeroDetail"
-        tools:text="jajajaaj" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/batman" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvSuperHeroDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@color/navy"
+            android:gravity="center"
+            android:padding="18sp"
+            android:textColor="@color/beige"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="jajajaaj" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+           android:layout_marginTop="300dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+
+                >
+
+                <Button
+                    android:id="@+id/btnBiography"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:backgroundTint="@color/brown"
+                    android:text="@string/biography" />
+
+                <Button
+                    android:id="@+id/btnAppearance"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:backgroundTint="@color/brown"
+                    android:text="@string/appearance" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+
+                <Button
+                    android:id="@+id/btnConnections"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:backgroundTint="@color/brown"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="@string/connections" />
+
+                <Button
+                    android:id="@+id/btnWork"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:backgroundTint="@color/brown"
+                    android:text="@string/work" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp">
+
+                <Button
+                    android:id="@+id/btnPowerStats"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/brown"
+                    android:text="@string/powerstats" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

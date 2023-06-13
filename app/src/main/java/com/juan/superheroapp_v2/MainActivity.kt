@@ -66,6 +66,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*Este método lo estoy repitiendo en un montón de clases,
+    tengo que ver cómo puedo refactorizarlo*/
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://superheroapi.com/")
